@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tokio Drift - Galería</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: black;
+      color: white;
+      overflow-x: hidden;
+    }
+    .background-lights {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 300%;
+      height: 100%;
+      background: url('tokio.jpg') repeat-x center center;
+      background-size: cover;
+      animation: moveBackground 60s linear infinite;
+      z-index: -2;
+      opacity: 0.3;
+    }
+    @keyframes moveBackground {
+      from { transform: translateX(0); }
+      to { transform: translateX(-66.66%); }
+    }
+    .smoke {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 300px;
+      background: url('humo.png') repeat-x;
+      background-size: contain;
+      animation: smokeMove 35s linear infinite;
+      z-index: -1;
+      opacity: 0.4;
+    }
+    @keyframes smokeMove {
+      from { background-position-x: 0; }
+      to { background-position-x: 2000px; }
+    }
+    h1 {
+      text-align: center;
+      padding-top: 80px;
+      color: #00FFFF;
+      text-shadow: 0 0 5px #00FFFF;
+      font-size: 50px;  
+    }
+    .car-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px;
+    }
+    .car-gallery a img {
+      width: 280px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .car-gallery a img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background-lights"></div>
+  <div class="smoke"></div>
+
+  <h1>TOKIO DRIFT</h1>
+
+  <div class="car-gallery">
+    <a href="r34.html"><img src="r34.jpg" alt="Nissan Skyline R34"></a>
+    <a href="supra.html"><img src="MK4.jpg" alt="Toyota Supra MK4"></a>
+    <a href="RX-7.html"><img src="RX-7.jpg" alt="Mazda RX-7"></a>
+    <a href="evo.html"><img src="Lancer.jpg" alt="Mitsubishi Evo VIII"></a>
+    <a href="350z.html"><img src="350Z.jpg" alt="Nissan 350Z"></a>
+  </div>
+
+</body>
+</html>

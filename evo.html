@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mitsubishi Lancer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: black;
+      color: white;
+      overflow-x: hidden;
+    }
+    .background-lights {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 300%;
+      height: 100%;
+      background: url('t1.jpg') repeat-x center center;
+      background-size: cover;
+      animation: moveBackground 60s linear infinite;
+      z-index: -2;
+      opacity: 0.3;
+    }
+    @keyframes moveBackground {
+      from { transform: translateX(0); }
+      to { transform: translateX(-66.66%); }
+    }
+    .smoke {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 300px;
+      background: url('humo.png') repeat-x;
+      background-size: contain;
+      animation: smokeMove 35s linear infinite;
+      z-index: -1;
+      opacity: 0.4;
+    }
+    @keyframes smokeMove {
+      from { background-position-x: 0; }
+      to { background-position-x: 2000px; }
+    }
+    .container {
+      max-width: 800px;
+      margin: 100px auto;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+    .container img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: #00FFFF;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .back-link:hover {
+      text-shadow: 0 0 10px #00FFFF;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background-lights"></div>
+  <div class="smoke"></div>
+
+  <div class="container">
+     <header>
+    <h1>Mitsubishi Lancer Evolution</h1>
+    <p>El rival eterno del WRX STI y un ícono del rally japonés</p>
+  </header>
+
+  <section>
+    <h2>⚙️ Motor y rendimiento</h2>
+    <ul>
+      <li>Motor 4G63T – 2.0L DOHC I4 Turbo (Evo I–IX)</li>
+      <li>Potencia: 276–300 hp dependiendo la versión</li>
+      <li>Torque: ~400 Nm</li>
+      <li>Turbo de fábrica, intercooler frontal, gran capacidad de tuning</li>
+      <li>0 a 100 km/h: ~4.6 segundos (Evo IX)</li>
+    </ul>
+  </section>
+
+<video width="700" height="400" controls>
+  <source src="lancer.mp4" type="video/mp4">
+ </video>
+    <br>
+    <a class="back-link" href="index.html">← Volver a la galería</a>
+  </div>
+
+  
+
+</body>
+</html>

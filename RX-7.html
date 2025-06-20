@@ -1,0 +1,103 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Supra MK4</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: black;
+      color: white;
+      overflow-x: hidden;
+    }
+    .background-lights {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 300%;
+      height: 100%;
+      background: url('t1.jpg') repeat-x center center;
+      background-size: cover;
+      animation: moveBackground 60s linear infinite;
+      z-index: -2;
+      opacity: 0.3;
+    }
+    @keyframes moveBackground {
+      from { transform: translateX(0); }
+      to { transform: translateX(-66.66%); }
+    }
+    .smoke {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 300px;
+      background: url('humo.png') repeat-x;
+      background-size: contain;
+      animation: smokeMove 35s linear infinite;
+      z-index: -1;
+      opacity: 0.4;
+    }
+    @keyframes smokeMove {
+      from { background-position-x: 0; }
+      to { background-position-x: 2000px; }
+    }
+    .container {
+      max-width: 800px;
+      margin: 100px auto;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+    .container img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: #00FFFF;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .back-link:hover {
+      text-shadow: 0 0 10px #00FFFF;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background-lights"></div>
+  <div class="smoke"></div>
+
+  <div class="container">
+     <header>
+    <h1>Mazda RX-7 FD3S</h1>
+    <p>La leyenda rotativa del JDM: ligero, rápido y único</p>
+  </header>
+
+  <section>
+    <h2>🌀 Motor rotativo</h2>
+    <ul>
+      <li>Tipo: 13B-REW – 1.3L Twin-Rotor Twin-Turbo</li>
+      <li>Potencia: 255–280 hp según el año y mercado</li>
+      <li>Torque: 294 Nm aprox.</li>
+      <li>Revoluciones hasta ~8,000 rpm</li>
+      <li>Turbos secuenciales: uno a bajas rpm, otro a altas</li>
+    </ul>
+  </section>
+
+<video width="700" height="400" controls>
+  <source src="Rx7.webm" type="video/mp4">
+ </video>
+
+    <br>
+
+    <a class="back-link" href="index.html">← Volver a la galería</a>
+  </div>
+</body>
+</html>
